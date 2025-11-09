@@ -12,7 +12,7 @@ const TablePage = () => {
 
   useEffect(() => {
     const fetchTables = async () => {
-      const res = await axios.get("https://tablebyorderfood-1-backend.onrender.com/api/tables");
+      const res = await axios.get("https://tablebyhotel.onrender.com/api/tables");
       setTables(res.data);
     };
     fetchTables();
@@ -21,7 +21,7 @@ const TablePage = () => {
   const addTable = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("https://tablebyorderfood-1-backend.onrender.com/api/tables", {
+      const res = await axios.post("https://tablebyhotel.onrender.com/api/tables", {
         tableNumber,
         capacity,
       });
